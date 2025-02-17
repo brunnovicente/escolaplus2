@@ -1,0 +1,33 @@
+<div class="container-sm shadow p-2">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand">Matrizes</span>
+
+
+            <div class="navbar-nav">
+                <a class="btn btn-sm btn-primary" href="/matriz/cadastrar">Novo</a>
+                <a class="btn btn-sm btn-secondary mx-1" href="/admin">Voltar</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <table class="table table-striped">
+        <tr>
+            <th>DESCRIÇÃO</th>
+            <TH>STATUS</TH>
+            <th></th>
+        </tr>
+        {{#each matrizes}}
+            <tr>
+                <td>{{descricao}}</td>
+                <td>{{statusMatriz status}}</td>
+                <td>
+                    <a href="/serie/{{id}}" class="btn btn-sm btn-outline-success">Series</a>
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
+</div>

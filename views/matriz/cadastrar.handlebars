@@ -1,0 +1,26 @@
+<div class="col-md-5 shadow p-2 mx-auto">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand">Cadastro de Matrizes</span>
+
+
+            <div class="navbar-nav">
+                <a class="btn btn-sm btn-secondary mx-1" href="/matriz">Voltar</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <form action="/matriz/cadastrar" method="post">
+        <div class="row">
+            <div class="col-sm">
+                <label>DESCRIÇÃO</label>
+                <input type="text" class="form-control" name="descricao" required>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end mt-3">
+            <button type="submit" class="btn btn-success">Salvar</button>
+        </div>
+    </form>
+</div>
