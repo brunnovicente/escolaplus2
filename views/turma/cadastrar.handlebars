@@ -1,0 +1,46 @@
+<div class="col-md-5 shadow p-2 mx-auto">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand">Nova Turma</span>
+
+
+            <div class="navbar-nav">
+                <a class="btn btn-sm btn-secondary mx-1" href="/turma">Voltar</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <form action="/turma/salvar" method="post">
+
+        <div class="row">
+
+            <div class="col-sm-9">
+                <label>DESCRIÇÃO</label>
+                <input type="number" class="form-control" name="descricao" required>
+            </div>
+
+            <div class="col-sm-3">
+                <label>TURNO</label>
+                <select class="form-select" name="turno">
+                    <option>MANHÃ</option>
+                    <option>TARDE</option>
+                    <option>NOITE</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <select class="form-select" name="serie_id">
+                {{#each series}}
+                    <option value="{{id}}">{{descricao}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="d-flex justify-content-end mt-3">
+            <button type="submit" class="btn btn-success">Salvar</button>
+        </div>
+    </form>
+</div>

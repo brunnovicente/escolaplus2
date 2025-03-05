@@ -1,0 +1,34 @@
+<div class="container-sm shadow p-2">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand">Turmas Ativas</span>
+            <div class="navbar-nav">
+                <a class="btn btn-sm btn-primary" href="/turma/cadastrar">Novo</a>
+                <a class="btn btn-sm btn-secondary mx-1" href="/">Voltar</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <table class="table table-striped">
+        <tr>
+            <th>DESCRIÇÃO</th>
+            <th>TURNO</th>
+            <th>SÉRIE</th>
+        </tr>
+        {{#each turmas}}
+            <tr>
+                <td>{{ano}}</td>
+                <td>{{turno}}</td>
+                <td>{{serie.descricao}}</td>
+                <td>
+                    {{#if (igual status 1)}}
+                        <a href="#" class="btn btn-sm btn-outline-danger">Fechar</a>
+                    {{/if}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
+</div>

@@ -41,6 +41,13 @@ app.engine('handlebars', handlebars.engine({
         json: function (objeto){
             return JSON.stringify(objeto, null, 2)
         },
+        igual: function (x, y){
+            if(x === y){
+                return true
+            }
+            return false
+        }
+        ,
         categoriaUsuario: function (categoria){
             if(categoria === 1){
                 return 'Secretaria'
@@ -58,6 +65,13 @@ app.engine('handlebars', handlebars.engine({
                 return 'Ativo'
             }else{
                 return 'Desativada'
+            }
+        },
+        statusLetivo: function (status){
+            if(status === 1){
+                return 'Aberto'
+            }else{
+                return 'Fechado'
             }
         }
     }
@@ -90,5 +104,14 @@ app.use('/matriz', matriz)
 
 import serie from './routes/serie.js';
 app.use('/serie', serie)
+
+import disciplina from './routes/disciplina.js';
+app.use('/disciplina', disciplina)
+
+import letivo from './routes/letivo.js';
+app.use('/letivo', letivo)
+
+import turma from './routes/turma.js';
+app.use('/turma', turma)
 
 app.listen(8001, ()=> console.log('Servidor Rodando em http://localhost:8001'))

@@ -1,0 +1,29 @@
+<div class="col-md-5 shadow p-2 mx-auto">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand">Novo Ano Letivo</span>
+
+
+            <div class="navbar-nav">
+                <a class="btn btn-sm btn-secondary mx-1" href="/letivo">Voltar</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <form action="/letivo/salvar" method="post">
+
+        <div class="row">
+
+            <div class="col-sm">
+                <label>ANO LETIVO</label>
+                <input type="number" class="form-control" name="ano" required>
+            </div>
+
+        </div>
+        <div class="d-flex justify-content-end mt-3">
+            <button type="submit" class="btn btn-success">Salvar</button>
+        </div>
+    </form>
+</div>

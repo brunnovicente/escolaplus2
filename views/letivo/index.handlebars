@@ -1,0 +1,33 @@
+<div class="container-sm shadow p-2">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand">Anos Letivos</span>
+            <div class="navbar-nav">
+                <a class="btn btn-sm btn-primary" href="/letivo/cadastrar">Novo</a>
+                <a class="btn btn-sm btn-secondary mx-1" href="/">Voltar</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <table class="table table-striped w-50 mx-auto">
+        <tr>
+            <th>ANO</th>
+            <th>STATUS</th>
+            <th></th>
+        </tr>
+        {{#each letivos}}
+            <tr>
+                <td>{{ano}}</td>
+                <td>{{statusLetivo status}}</td>
+                <td>
+                    {{#if (igual status 1)}}
+                        <a href="#" class="btn btn-sm btn-outline-danger">Fechar</a>
+                    {{/if}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
+</div>

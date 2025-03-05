@@ -1,0 +1,33 @@
+<div class="container-sm shadow p-2">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand">Disciplinas: {{matriz.descricao}}</span>
+
+
+            <div class="navbar-nav">
+                <a class="btn btn-sm btn-primary" href="/disciplina/cadastrar/{{matriz.id}}">Novo</a>
+                <a class="btn btn-sm btn-secondary mx-1" href="/matriz">Voltar</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <table class="table table-striped">
+        <tr>
+            <th>DESCRIÇÃO</th>
+            <th>SEQUENCIA</th>
+            <th></th>
+        </tr>
+        {{#each disciplinas}}
+            <tr>
+                <td>{{descricao}}</td>
+                <td>{{sequencia}}</td>
+                <td>
+
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
+</div>
